@@ -3,7 +3,8 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
-import org.apache.http.HttpRequest;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -86,5 +87,25 @@ public class RestTest {
                 .extract()
                 .jsonPath().getString("job");
         assertThat(trabajo, equalTo("zion resident"));
+    }
+
+    @Test
+    public void getAllUsersTest(){
+        Response response = given().get("users?page=2");
+        Headers headers = response.getHeaders();
+        int codigoEstado = response.getStatusCode();
+        String body = response.getBody().asString();
+        String contentType = response.getContentType();
+
+        assertThat(codigoEstado, equalTo(HttpStatus.SC_OK));
+        System.out.println("*************************************************************");
+        System.out.println("*************************************************************");
+        System.out.println("Body: " + body);
+        System.out.println("Codigo: " + codigoEstado);
+        System.out.println("Tipo Contenido: " + contentType);
+        System.out.println("Headers: " + headers);
+        System.out.println("*************************************************************");
+        System.out.println("*************************************************************");
+        System.out.println("Fecha: " + headers.get("Date"));
     }
 }
