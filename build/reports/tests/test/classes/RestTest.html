@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">5</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.841s</div>
+<div class="counter">5.251s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,13 +78,28 @@
 </tr>
 </thead>
 <tr>
+<td class="success">deleteTest</td>
+<td class="success">1.735s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">getUsers</td>
-<td class="success">2.015s</td>
+<td class="success">1.029s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">loginTest</td>
-<td class="success">0.826s</td>
+<td class="success">0.839s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">patchTest</td>
+<td class="success">0.828s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">putTest</td>
+<td class="success">0.820s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,7 +107,33 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Request method:	GET
+<pre>Request method:	DELETE
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 204 No Content
+Date: Tue, 05 Jul 2022 19:43:45 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/&quot;2-vyGp6PvFo4RvsFtPoIWeCReyIC8&quot;
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=rgaYEPTqZyVXyltsfpRbfq6yRRah4QA0R5AsvOcGlglQGasoCQN5ElLfOI5P4T0Af1c9n9tkeaSzFC0xgVfGIePhF8YWjhOx3Z7q6m1Bh%2Ff6DlThR4v9go66Qw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Server: cloudflare
+CF-RAY: 726297644970571e-MIA
+Request method:	GET
 Request URI:	https://reqres.in/api/users/2
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
@@ -105,7 +146,7 @@ Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
 Body:			&lt;none&gt;
 HTTP/1.1 200 OK
-Date: Tue, 05 Jul 2022 15:08:26 GMT
+Date: Tue, 05 Jul 2022 19:43:46 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -115,13 +156,13 @@ Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
 Via: 1.1 vegur
 Cache-Control: max-age=14400
 CF-Cache-Status: HIT
-Age: 2501
+Age: 6243
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=pnFAFy9YPC7llokFSa2jl64e9j3GCRA5sXRJ7OMlLBWy3GMSHyetdWj123qGyIeSzJp4tHHOC85J8Jw87f%2BHOqNxJwh6vJUemhtbpOYZMwiDtXEiDsjYAJmvTQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=7AMzY3IebPsnLKXZ87BVBYsdTbRLnTz0i22S7W7IF8rRZOxgI5Xs1PuWx%2F3dEKoe0ti5y%2Ba0d1lqb9v3sdl68%2F1jG4V1OYn5fArDKV12lL1uctdxiwBje9%2FPGw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 72610416eb9e127b-MIA
+CF-RAY: 72629769db3012a3-MIA
 Content-Encoding: gzip
 
 {
@@ -154,7 +195,7 @@ Body:
     &quot;password&quot;: &quot;cityslicka&quot;
 }
 HTTP/1.1 200 OK
-Date: Tue, 05 Jul 2022 15:08:27 GMT
+Date: Tue, 05 Jul 2022 19:43:47 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 29
 Connection: keep-alive
@@ -164,13 +205,90 @@ Etag: W/&quot;1d-lGCrvD6B7Qzk11+2C98+nGhhuec&quot;
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=8l1YVNGORwJ9l4QCA2MItJwV48YmwwArdn3fD42gcNe%2Bd28U1b3SwGtHl1fBlqvSaATgWBQOL1W5qP5PPpQ0y2W5S%2BpUUgBzdd0W7RtfuV6tZcCtVJUrMpM8tg%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=pH23%2Bx5IqUWd8NvKkKEM1B5TrhlE9KVTTA1rRdgcRbVh1k17YDaGkiJt2qj3KzBDKxDv3H%2B8zqqRs%2BZFFR1xWzHgeH6DYETZQLY0CfaliB3ECMrvyDTqq2pVRQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Server: cloudflare
-CF-RAY: 7261041c59cda691-GRU
+CF-RAY: 726297701b913708-MIA
 
 {
     &quot;token&quot;: &quot;QpwL5tke4Pnpja7X4&quot;
+}
+Request method:	PATCH
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;
+}
+HTTP/1.1 200 OK
+Date: Tue, 05 Jul 2022 19:43:48 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/&quot;50-gxEscRrbfetQCbAzdFqSGCJ8/eI&quot;
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=t2u7o5ZJrtCaH%2FeS8J0XgTw6blUQ2znJ19HGFlv2am4B%2F70UoriBrFCUgss4ZdxNQhUTSOc505h7Nbf%2F93IngNVfdtSFrS3lFUBtWzaO%2BvflT4LGpm9wmxKeIA%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Server: cloudflare
+CF-RAY: 726297754bba12a7-MIA
+Content-Encoding: gzip
+
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;,
+    &quot;updatedAt&quot;: &quot;2022-07-05T19:43:48.245Z&quot;
+}
+Request method:	PUT
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;
+}
+HTTP/1.1 200 OK
+Date: Tue, 05 Jul 2022 19:43:49 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/&quot;50-So/dEUmoiIOvGq8MBNFTYMIY+ys&quot;
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=5SD5GlksWdBSYFboo26jXaN%2FwNXeER7TXuzJ0d9eyHy9IGMP7L9%2F1gYkfCFlt6Se9VPg9X39B5MsT%2B9zBdszKw7LWMVOrnl%2FhHv9omjFJCfcL%2FYfpSH7kBXy6Q%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7262977a69485724-MIA
+Content-Encoding: gzip
+
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;,
+    &quot;updatedAt&quot;: &quot;2022-07-05T19:43:49.073Z&quot;
 }
 </pre>
 </span>
@@ -183,7 +301,7 @@ CF-RAY: 7261041c59cda691-GRU
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8</a> at 05-07-2022 11:08:27</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at 05-07-2022 15:43:47</p>
 </div>
 </div>
 </body>
