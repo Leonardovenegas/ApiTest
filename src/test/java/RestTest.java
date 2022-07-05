@@ -9,10 +9,13 @@ import org.apache.http.HttpStatus;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static io.restassured.path.json.JsonPath.from;
 
 public class RestTest {
 
@@ -107,5 +110,39 @@ public class RestTest {
         System.out.println("*************************************************************");
         System.out.println("*************************************************************");
         System.out.println("Fecha: " + headers.get("Date"));
+    }
+
+    @Test
+    public void getAllUsersTest2(){
+        String response = given()
+                .when()
+                .get("users?page=2")
+                .then().extract().body().asString();
+        int pagina = from(response).get("page");
+        int paginas = from(response).get("total_pages");
+        int idPrimerUsuario = from(response).get("data[0].id");
+
+        System.out.println("*************************************************************");
+        System.out.println("*************************************************************");
+        System.out.println("Pagina: " + pagina);
+        System.out.println("Paginas: " + paginas);
+        System.out.println("Id 1er Usuario: " + idPrimerUsuario);
+
+        List<Map> usuariosIdMayorA10 = from(response).get("data.findAll { user -> user.id > 10}");
+
+        List<Map> usuario = from(response).get("data.findAll { user -> user.id > 10 && user.last_name == 'Howell'}");
+    }
+
+    @Test
+    public void createdUserTest(){
+        String respuesta = given()
+                .when()
+                .body("{\n" +
+                        "    \"name\": \"morpheus\",\n" +
+                        "    \"job\": \"leader\"\n" +
+                        "}")
+                .post("users")
+                .then().extract().asString();
+        Usuario usuario = from(respuesta).getObject("", Usuario.class);
     }
 }

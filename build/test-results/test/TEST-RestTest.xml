@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RestTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-05T20:22:09" hostname="LAPTOP-MUMLH26I" time="1.48">
+<testsuite name="RestTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-05T22:32:37" hostname="LAPTOP-MUMLH26I" time="406.526">
   <properties/>
-  <testcase name="getAllUsersTest" classname="RestTest" time="1.48"/>
+  <testcase name="getAllUsersTest2" classname="RestTest" time="406.526"/>
   <system-out><![CDATA[Request method:	GET
 Request URI:	https://reqres.in/api/users?page=2
 Proxy:			<none>
@@ -15,7 +15,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 05 Jul 2022 20:22:12 GMT
+Date: Tue, 05 Jul 2022 22:32:40 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -25,13 +25,13 @@ Etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
 Via: 1.1 vegur
 Cache-Control: max-age=14400
 CF-Cache-Status: HIT
-Age: 4874
+Age: 5216
 Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=blzYtxWUDRnVW2503nSmdPieqVAhKyLoxLKM24IQWXryNVPw3UFPlpe%2FnOlJ8I10NpOvGTbwvpqFic5HXW%2BSrtN9XpjUFLD1BShrW8JVQUMgcW5esTxQq17VpA%3D%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0tn1yW3pEjBkoBvya8jiQ%2Bg%2BmKxIKhU%2Bw36ayD9Of8SH7qpJog7xJf7Cj41Fes7F8y3jMdY%2BDLA3vGelzMoxukwaRDcB1e2MWMaEqnUO5KLR2ZyE%2B24%2FE9MJwQ%3D%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 7262cfb6fd29571e-MIA
+CF-RAY: 72638ed20c093711-MIA
 Content-Encoding: gzip
 
 {
@@ -90,30 +90,9 @@ Content-Encoding: gzip
 }
 *************************************************************
 *************************************************************
-Body: {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
-Codigo: 200
-Tipo Contenido: application/json; charset=utf-8
-Headers: Date=Tue, 05 Jul 2022 20:22:12 GMT
-Content-Type=application/json; charset=utf-8
-Transfer-Encoding=chunked
-Connection=keep-alive
-X-Powered-By=Express
-Access-Control-Allow-Origin=*
-Etag=W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
-Via=1.1 vegur
-Cache-Control=max-age=14400
-CF-Cache-Status=HIT
-Age=4874
-Expect-CT=max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-Report-To={"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=blzYtxWUDRnVW2503nSmdPieqVAhKyLoxLKM24IQWXryNVPw3UFPlpe%2FnOlJ8I10NpOvGTbwvpqFic5HXW%2BSrtN9XpjUFLD1BShrW8JVQUMgcW5esTxQq17VpA%3D%3D"}],"group":"cf-nel","max_age":604800}
-NEL={"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-Vary=Accept-Encoding
-Server=cloudflare
-CF-RAY=7262cfb6fd29571e-MIA
-Content-Encoding=gzip
-*************************************************************
-*************************************************************
-Fecha: Date=Tue, 05 Jul 2022 20:22:12 GMT
+Pagina: 2
+Paginas: 2
+Id 1er Usuario: 7
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
