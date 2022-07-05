@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class Test</title>
+<title>Test results - Class RestTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class Test</h1>
+<h1>Class RestTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; Test</div>
+<a href="../packages/default-package.html">default-package</a> &gt; RestTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.502s</div>
+<div class="counter">3.060s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,13 @@
 </tr>
 </thead>
 <tr>
+<td class="success">getUsers</td>
+<td class="success">2.254s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">loginTest</td>
-<td class="success">2.502s</td>
+<td class="success">0.806s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,7 +92,52 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Request method:	POST
+<pre>Request method:	GET
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Tue, 05 Jul 2022 14:51:36 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: HIT
+Age: 1491
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=RMGCVO%2ByF0WS0uHIKTxpDGGSty3jZ6g9RwKaGPsiyFKpmEzvPr2KDMaITxCLoMwKrdqQuaHb1hlMG02wqCnrxAOqIC9p3mgSMnOgMuzlS7gHPXBwDQ0yqWucUg%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7260eb723edfef2a-MIA
+Content-Encoding: gzip
+
+{
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;email&quot;: &quot;janet.weaver@reqres.in&quot;,
+        &quot;first_name&quot;: &quot;Janet&quot;,
+        &quot;last_name&quot;: &quot;Weaver&quot;,
+        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/2-image.jpg&quot;
+    },
+    &quot;support&quot;: {
+        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+    }
+}
+Request method:	POST
 Request URI:	https://reqres.in/api/login
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
@@ -104,7 +154,7 @@ Body:
     &quot;password&quot;: &quot;cityslicka&quot;
 }
 HTTP/1.1 200 OK
-Date: Tue, 05 Jul 2022 14:43:06 GMT
+Date: Tue, 05 Jul 2022 14:51:37 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 29
 Connection: keep-alive
@@ -114,10 +164,10 @@ Etag: W/&quot;1d-lGCrvD6B7Qzk11+2C98+nGhhuec&quot;
 Via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=ap20YopPims8oFqgQEQ5aOuXVp543xQmpigAeJpfie%2FIFITivcsiZ0PpEjXKzNurQxLLNf%2FmU04nh6cFZhncJVQw0SIdxhKFJ07gC32Xhsnw8Vlf%2FN2fKgBJjQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=kd9oIKfstg881J6tvUp0e4pvxhn2G8MlQ%2F6oZquvCXCBjvd2sHj6rOU7IfRCBZh7NCM%2Fv0x8BxMXlOnFcs8qXgYi6reLdBiYU%2BM5opJ1wZv8VCDeBfFCcMWMbA%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Server: cloudflare
-CF-RAY: 7260defd68a812a3-MIA
+CF-RAY: 7260eb78bea55731-MIA
 
 {
     &quot;token&quot;: &quot;QpwL5tke4Pnpja7X4&quot;
@@ -133,7 +183,7 @@ CF-RAY: 7260defd68a812a3-MIA
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8</a> at 05-07-2022 10:43:06</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at 05-07-2022 10:51:37</p>
 </div>
 </div>
 </body>

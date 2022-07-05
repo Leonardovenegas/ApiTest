@@ -1,9 +1,13 @@
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import org.testng.annotations.Test;
 
-public class Test {
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.equalTo;
 
-    @org.testng.annotations.Test
+public class RestTest {
+
+    @Test
     public void loginTest(){
         String response = RestAssured
                 .given()
@@ -18,5 +22,19 @@ public class Test {
                 .log().all()
                 .extract()
                 .asString();
+    }
+
+    @Test
+    public void getUsers(){
+        RestAssured
+                .given()
+                .log().all()
+                .contentType(ContentType.JSON)
+                .get("https://reqres.in/api/users/2")
+                .then()
+                .log().all()
+                .statusCode(200)
+                .body("data.id", notNullValue())
+                .body("data.id", equalTo(2));
     }
 }
