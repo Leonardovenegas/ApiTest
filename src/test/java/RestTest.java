@@ -145,4 +145,23 @@ public class RestTest {
                 .then().extract().asString();
         Usuario usuario = from(respuesta).getObject("", Usuario.class);
     }
+
+    @Test
+    public void registerUserTest(){
+        SolicitudCrearUsuario solicitudCrearUsuario = new SolicitudCrearUsuario();
+        solicitudCrearUsuario.setEmail("eve.holt@reqres.in");
+        solicitudCrearUsuario.setPassword("pistol");
+        RespuestaCrearUsuario respuestaCrearUsuario = given()
+                .when()
+                .body(solicitudCrearUsuario)
+                .post("users")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .contentType("application/json; charset=utf-8")
+                .extract()
+                .body()
+                .as(RespuestaCrearUsuario.class);
+        assertThat(respuestaCrearUsuario.getId(), equalTo("4"));
+        assertThat(respuestaCrearUsuario.getToken(), equalTo("QpwL5tke4Pnpja7X4"));
+    }
 }
