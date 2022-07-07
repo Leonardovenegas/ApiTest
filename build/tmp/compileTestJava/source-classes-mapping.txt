@@ -4,5 +4,7 @@ SolicitudCrearUsuario.java
  SolicitudCrearUsuario
 RespuestaCrearUsuario.java
  RespuestaCrearUsuario
+BaseTest.java
+ BaseTest
 RestTest.java
  RestTest

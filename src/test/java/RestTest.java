@@ -1,33 +1,19 @@
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
-import io.restassured.http.ContentType;
+import com.fasterxml.jackson.databind.ser.Serializers;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
 import static io.restassured.path.json.JsonPath.from;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 
-public class RestTest {
-
-    @BeforeTest
-    public void setUp() {
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
-                .build();
-    }
+public class RestTest extends BaseTest {
 
     @Test
     public void loginTest() {
@@ -86,7 +72,7 @@ public class RestTest {
                         "}")
                 .patch("users/2")
                 .then()
-                .statusCode(HttpStatus.SC_OK)
+                .spec(defaultEspecificacionRespuesta())
                 .extract()
                 .jsonPath().getString("job");
         assertThat(trabajo, equalTo("zion resident"));
@@ -156,8 +142,7 @@ public class RestTest {
                 .body(solicitudCrearUsuario)
                 .post("users")
                 .then()
-                .statusCode(HttpStatus.SC_OK)
-                .contentType("application/json; charset=utf-8")
+                .spec(defaultEspecificacionRespuesta())
                 .extract()
                 .body()
                 .as(RespuestaCrearUsuario.class);
